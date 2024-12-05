@@ -4,7 +4,7 @@ Desenvolvimento de Aplicativos Mobile. Engenharia de Software
 ## Integrantes do Grupo
 - Gabriel Forster Rocha
 - Nicolas Kasteller Wajima
-- Pablo Arman Schuler
+- Pablo Arman Schuller
 
 ## Proposta de Desenvolvimento
 App com autenticação em Provedor do Firebase
@@ -12,7 +12,7 @@ App com autenticação em Provedor do Firebase
 - Objetivo: Fazer um login em app com login social do firebase.
 
 ## Versão Mínima do SDK
-- minSdkVersion: 23
+- minSdkVersion: 21
 
 ## Atualmente, projeto:
 
@@ -78,4 +78,4 @@ App com autenticação em Provedor do Firebase
  ```
 
 ## Projeto rodando
-<video src="./assets/video.mp4" />
+[Link para um vídeo do projeto rodando](https://youtu.be/Ej4Swbvcyo8)
