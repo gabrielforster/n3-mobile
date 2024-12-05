@@ -19,9 +19,9 @@ App com autenticação em Provedor do Firebase
 1. Páginas de interação com a entrada social google:
 
 
-| <p align="center">Login</p> | <p align="center">Home</p> |
-| ----- | ----- |
-| <img src="" />  | <img src="" />  |
+| <p align="center">Login</p>      | <p align="center">Home</p>      |
+|----------------------------------|---------------------------------|
+| <img src="./assets/login.png" /> | <img src="./assets/home.png" /> |
 
 ## Funcionalidades por Tela
 
@@ -78,4 +78,4 @@ App com autenticação em Provedor do Firebase
  ```
 
 ## Projeto rodando
-<video src="" />
+<video src="./assets/video.mp4" />
