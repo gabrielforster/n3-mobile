@@ -5,6 +5,8 @@ import 'package:iconly/iconly.dart';
 
 import './home.dart';
 
+// Página de Login do aplicativo
+
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
 
@@ -47,17 +49,17 @@ class _LoginPageState extends State<LoginPage> {
               ),
               const SizedBox(height: 40),
               FilledButton.tonalIcon(
-                onPressed: () async {
+                onPressed: () async { // Tratativa para executar o login com o Google ao clicar no botão
                   try {
                     await UserController.loginWithGoogle();
                     await Navigator.of(context).pushAndRemoveUntil(
                       MaterialPageRoute(
-                        builder: (context) => const HomePage(),
+                        builder: (context) => const HomePage(), // Navega para a página de home após o login
                       ),
                       (route) => false,
                     );
                   } on FirebaseAuthException catch (error) {
-                    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                    ScaffoldMessenger.of(context).showSnackBar(SnackBar( // Tratativa de erro em caso de falha no Login
                       content: Text(
                         error.message ?? "Ocorreu um erro ao fazer login",
                       ),

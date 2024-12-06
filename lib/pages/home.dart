@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import '../pages/login.dart';
 import '../controllers/user.dart';
 
+// Página de Home do aplicativo
+
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -32,7 +34,7 @@ class _HomePageState extends State<HomePage> {
                   radius: 50,
                   backgroundColor: Colors.grey[200],
                   foregroundImage: NetworkImage(
-                    UserController.user?.photoURL ?? '',
+                    UserController.user?.photoURL ?? '', // Exibe a foto do usuário autenticado
                   ),
                   child: UserController.user?.photoURL == null
                       ? const Icon(Icons.person, size: 50)
@@ -49,7 +51,7 @@ class _HomePageState extends State<HomePage> {
               ),
               const SizedBox(height: 8),
               Text(
-                UserController.user?.displayName ?? 'User',
+                UserController.user?.displayName ?? 'User', // Exibe o nome do usuário autenticado
                 style: const TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
@@ -58,7 +60,7 @@ class _HomePageState extends State<HomePage> {
               const SizedBox(height: 48),
               ElevatedButton.icon(
                 onPressed: () async {
-                  await UserController.signOut();
+                  await UserController.signOut(); // Botão para deslogar usuário do sistema
                   if (mounted) {
                     Navigator.of(context).pushReplacement(
                       MaterialPageRoute(

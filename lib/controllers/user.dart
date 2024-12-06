@@ -1,9 +1,12 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
+// UserController é o controller responsável por tratativas que envolvem a autenticação do usuário
 class UserController {
+  // user é a instância do usuário autenticado
   static User? user = FirebaseAuth.instance.currentUser;
 
+  // loginWithGoogle é uma função que realiza o login com o Google
   static Future<void> loginWithGoogle() async {
     try {
       final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
@@ -31,6 +34,7 @@ class UserController {
     }
   }
 
+  // signOut é uma função que realiza o logout do usuário
   static Future<void> signOut() async {
     await FirebaseAuth.instance.signOut();
     await GoogleSignIn().signOut();
